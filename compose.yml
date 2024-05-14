@@ -1,0 +1,10 @@
+services:
+  jupyter:
+    build:
+      context: .
+      dockerfile: Containerfile
+    ports:
+       - 8888:8888
+    volumes:
+      - "${PWD}/HOME":/home/jovyan
+
